@@ -1,0 +1,367 @@
+@import url("https://fonts.googleapis.com/css2?family=Protest+Riot&display=swap");
+
+/*! Estilos generales para el cuerpo */
+body {
+  background: linear-gradient(45deg, #ffafbd, #ffc3a0);
+  color: #d6336c;
+  font-family: "Protest Riot";
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+  transition: background-color 0.3s;
+  animation: backgroundAnimation 20s infinite alternate ease-in-out;
+}
+
+@keyframes backgroundAnimation {
+  0% {
+    background: linear-gradient(45deg, #ffafbd, #ffc3a0);
+  }
+  25% {
+    background: linear-gradient(45deg, #ffcc33, #ff99cc);
+  }
+  50% {
+    background: linear-gradient(45deg, #ff6666, #ffcc99);
+  }
+  75% {
+    background: linear-gradient(45deg, #ffcc33, #ff99cc);
+  }
+  100% {
+    background: linear-gradient(45deg, #ffafbd, #ffc3a0);
+  }
+}
+
+/*! Estilos para el contenedor principal */
+.container {
+  text-align: center;
+  background-color: #fff0f5;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  max-width: 600px;
+  width: 90%;
+  transition: transform 0.3s ease;
+  animation: fadeIn 1s ease-out;
+  position: relative;
+}
+
+/*! Estilos para el título */
+h1 {
+  color: #ff69b4;
+  margin-bottom: 20px;
+  animation: fadeIn 1.5s ease-out;
+  text-shadow: 2px 2px 4px #ffb6c1;
+}
+
+/*! Estilos para la imagen redondeada */
+.rounded-image {
+  width: 100%;
+  max-width: 400px;
+  border-radius: 20px;
+  margin-bottom: 20px;
+  animation: fadeIn 2s ease-out;
+}
+
+/*! Estilos para el párrafo */
+p {
+  color: #ff1493;
+  text-align: center;
+  font-size: 18px;
+  margin-bottom: 30px;
+  animation: fadeIn 2.5s ease-out;
+  text-shadow: 1px 1px 2px #ffb6c1;
+}
+
+/*! Estilos para los botones */
+.buttons {
+  display: flex;
+  padding: 12px 70px;
+  justify-content: space-around;
+  animation: fadeIn 3s ease-out;
+}
+
+button {
+  background-color: #ff1493;
+  color: white;
+  border: none;
+  padding: 15px 3em;
+  border-radius: 5px;
+  font-size: 18px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  font-family: "Protest Riot";
+}
+
+button:hover {
+  background-color: #ff69b4;
+}
+
+button:focus {
+  outline: none;
+}
+
+button:focus-visible {
+  outline: none;
+}
+
+/*! Estilos para la galería de fotos */
+.photo-gallery {
+  margin-top: 20px;
+  margin-bottom: 5px;
+  animation: fadeIn 4s ease-out;
+}
+
+.photo-gallery h1 {
+  color: #ff69b4;
+  margin-bottom: 20px;
+  text-shadow: 2px 2px 4px #ffb6c1;
+}
+
+.photos {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.photos img {
+  width: 100%;
+  max-width: 350px;
+  border-radius: 10px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.photos img:hover {
+  transform: scale(1.04);
+}
+
+/*! Estilo para respuesta positiva */
+.yes-response {
+  width: 32em;
+  height: 22em;
+  margin-top: -20px;
+  margin-bottom: -5px;
+  border-radius: 10px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.yes-message {
+  font-size: 30px;
+}
+
+.yes-button {
+  background-color: #ff1493;
+  color: white;
+  border: none;
+  padding: 15px 25px;
+  border-radius: 5px;
+  font-size: 18px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  font-family: "Protest Riot";
+  text-decoration: none;
+  display: inline-block;
+  margin-top: 20px;
+  text-align: center;
+}
+
+.yes-button:hover {
+  background-color: #ff69b4;
+}
+
+/*! Estilo para la respuesta negativa */
+.no-response {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.no-message {
+  font-size: 25px;
+}
+
+.no-button {
+  background-color: #ff1493;
+  color: white;
+  border: none;
+  padding: 15px 25px;
+  border-radius: 5px;
+  font-size: 18px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  font-family: "Protest Riot";
+  text-decoration: none;
+  display: inline-block;
+  margin-top: 20px;
+  text-align: center;
+}
+
+.no-button:hover {
+  background-color: #ff69b4; /* Igual que los otros botones en hover */
+}
+/*! EStilo contenedor de musica */
+.music-container {
+  position: fixed; /* Fija el contenedor al viewport */
+  top: 10px; /* Espacio desde la parte superior */
+  right: 10px; /* Espacio desde la derecha */
+  z-index: 9999; /* Muy alto para evitar que quede debajo de otros elementos */
+}
+
+/*! Estilos para el botón de mute */
+#muteButton {
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  color: #d6336c;
+  transition: color 0.3s ease;
+  width: 50px;
+  height: 50px;
+  line-height: 50px;
+  text-align: center;
+  padding: 0;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  border-radius: 50%;
+}
+
+#muteButton:hover {
+  color: #ff69b4;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/** Estilos responsivos para móviles */
+@media (max-width: 480px) {
+  body {
+    padding: 12px;
+    font-size: 14px;
+  }
+
+  /** Contenedor principal */
+  .container {
+    padding: 10px 15px;
+    border-radius: 8px;
+    max-width: 95%;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.15);
+  }
+
+  /** Título */
+  h1 {
+    font-size: 2em;
+    margin-bottom: 15px;
+  }
+
+  /** Párrafo */
+  p {
+    font-size: 14px;
+    margin-bottom: 25px;
+    line-height: 1.5;
+    text-align: start;
+    padding: 14px;
+  }
+
+  /** Imagen redondeada */
+  .rounded-image {
+    max-width: 90%;
+    margin-bottom: 15px;
+    border-radius: 15px;
+  }
+
+  /** Botones */
+  button {
+    padding: 12px 25px;
+    font-size: 14px;
+    border-radius: 4px;
+    margin: 5px;
+    width: 100%;
+  }
+
+  /** Botones en contenedor */
+  .buttons {
+    padding: 0px 2em;
+    gap: 10px;
+  }
+
+  /** Galería de fotos */
+  .photo-gallery {
+    margin-top: 2.5em;
+    margin-bottom: 10px;
+  }
+
+  .photos {
+    gap: 10px;
+  }
+
+  .photos img {
+    max-width: 90%;
+    border-radius: 15px;
+    transition: transform 0.3s ease-in-out;
+  }
+
+  .photos img:hover {
+    transform: none;
+  }
+
+  /** Mensaje positivo */
+  .yes-message {
+    font-size: 19px;
+    text-align: center;
+  }
+
+  .yes-response {
+    width: 16em;
+    height: 12em;
+    padding: 3px 30px;
+  }
+
+  .yes-button {
+    width: 5em;
+    height: 4em;
+    padding: 15px 20px;
+    font-size: 10px;
+    margin-top: -20px;
+  }
+
+  /** Mensaje negativo */
+  .no-message {
+    font-size: 16px;
+    text-align: center;
+  }
+
+  .no-response {
+    width: 20em;
+    height: 8em;
+    padding: 0em 1em 1em;
+  }
+
+  .no-button {
+    width: 5em;
+    height: 4em;
+    padding: 15px 20px;
+    font-size: 10px;
+    margin-top: 8px;
+  }
+
+  /** Botón de mute */
+  #muteButton {
+    top: 2px;
+    right: 2px;
+    font-size: 18px;
+    background: none;
+    border: none;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    padding: 0px;
+  }
+}
